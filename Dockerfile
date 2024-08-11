@@ -11,6 +11,9 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Fix permissions for esbuild and other binaries
+RUN chmod +x node_modules/.bin/*
+
 # Build the application
 RUN npm run build
 
