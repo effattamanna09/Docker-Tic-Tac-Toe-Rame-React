@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5000:5173"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=production
